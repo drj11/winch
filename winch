@@ -1,0 +1,11 @@
+#!/bin/sh
+s=$(stty -a)
+s=${s#*intr}
+s=${s%%;*}
+K=${s##* }
+printf 1>&2 "%s\n" "Change window size; press $K to exit."
+trap 'set -- $(stty size);printf "\r%s %s" $2 $1' WINCH
+kill -WINCH $$
+while sleep 4&
+do wait
+done
