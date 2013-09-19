@@ -1,0 +1,19 @@
+{
+  "name": "winch",
+  "version": "0.0.0",
+  "description": "Display X and Y size when window changes size.",
+  "main": "index.js",
+  "scripts": {
+    "test": "true"
+  },
+  "bin": {
+    "winch" : "./winch"
+  },
+  "keywords": [
+    "SIGWINCH",
+    "window",
+    "size"
+  ],
+  "author": "David Jones <drj@pobox.com>",
+  "license": "BSD"
+}
