@@ -4,7 +4,7 @@ s=${s#*intr}
 s=${s%%;*}
 K=${s##* }
 printf 1>&2 "%s\n" "Change window size; press $K to exit."
-trap 'set -- $(stty size);printf "\r%s %s" $2 $1' WINCH
+trap 'set -- $(stty size);printf "\r%s %s      \b\b\b\b\b\b" $2 $1' WINCH
 kill -WINCH $$
 while sleep 4&
 do wait
