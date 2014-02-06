@@ -10,3 +10,11 @@ Change window size; press ^C to exit.
 ```
 
 It is of course named after the `SIGWINCH` Unix signal.
+
+Install with
+
+```
+npm install winch
+```
+
+If you have `npm`.
